@@ -67,19 +67,64 @@
 
 // ===============================
 
-const min = 50
-const max = 100
+// const min = 50
+// const max = 100
 
-let randomyNumber = Math.floor(Math.random() * (max - min + 1)) + min
+// let randomyNumber = Math.floor(Math.random() * (max - min + 1)) + min
 
-document.getElementById('roll_button').onclick = function() {
-    randomyNumber = Math.floor(Math.random() * (max - min + 1)) + min
-    if (randomyNumber < 50) {
-        document.getElementById('my_number').textContent = `Выпало меньше 50 | ${randomyNumber}`
-    } else if (randomyNumber > 50) {
-        document.getElementById('my_number').textContent = `Выпало больше 50 | ${randomyNumber}`
-    } else {
-        document.getElementById('my_number').textContent = `Выпало 50 | ${randomyNumber}`
-    }
-    // document.getElementById('my_number').textContent = randomyNumber
-}
+// document.getElementById('roll_button').onclick = function() {
+//     randomyNumber = Math.floor(Math.random() * (max - min + 1)) + min
+//     if (randomyNumber < 50) {
+//         document.getElementById('my_number').textContent = `Выпало меньше 50 | ${randomyNumber}`
+//     } else if (randomyNumber > 50) {
+//         document.getElementById('my_number').textContent = `Выпало больше 50 | ${randomyNumber}`
+//     } else {
+//         document.getElementById('my_number').textContent = `Выпало 50 | ${randomyNumber}`
+//     }
+// }
+
+// ===============================
+
+// let age = 18
+
+// if (age >= 18) {
+//     console.log('Вы совершеннолетний')
+// }
+// else {
+//     console.log('Вы не совершеннолетний')
+// }
+
+// ===============================
+
+// const myCheckBox = document.getElementById('myCheckBox')
+// const visaBtn = document.getElementById('viseBtn')
+// const mrBtn = document.getElementById('MrBtn')
+// const mirBtn = document.getElementById('MirBtn')
+// const mySubmit = document.getElementById('mySubmit')
+// const subResult = document.getElementById('subResult')
+// const paymentResult = document.getElementById('paymentResult')
+
+// mySubmit.onclick = function() {
+//     if (myCheckBox.checked) {
+//         subResult.textContent = `Вы подписаны!`
+//     }
+//     else {
+//         subResult.textContent = `Вы не подписаны!`
+//     }
+//     if (visaBtn.checked) {
+//         paymentResult.textContent = `Вы выбрали Visa`
+//     }
+//     else if (mrBtn.checked) {
+//         paymentResult.textContent = `Вы выбрали MrBtn`
+//     }
+//     else 
+//     {
+//         paymentResult.textContent = `Вы выбрали MirBtn`
+//     }
+// }
+
+// let age = 18
+
+// age >= 18 ? console.log('Вы совершеннолетний') : console.log('Вы не совершеннолетний')
+
+// ===============================
