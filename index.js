@@ -128,3 +128,28 @@
 // age >= 18 ? console.log('Вы совершеннолетний') : console.log('Вы не совершеннолетний')
 
 // ===============================
+
+// let username = ''
+
+// while (username == '' | username === null){
+//     username = window.prompt('Введите ваше имя')
+// }
+
+// console.log(username)
+
+// ===============================
+
+// for(let i = 0; i < 10 + 1; i++){
+//     if(i == 5) {
+//         continue
+//     }
+//     if (i == 8) {
+//         break
+//     }
+//     console.log(i)
+// }
+
+// ===============================
+
+
+
