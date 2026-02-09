@@ -2,3 +2,27 @@ body{
     font-family: Verdana;
     font-size: 1.1em;
 }
+
+#counter{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+}
+
+#div_btn{
+    text-align: center;
+}
+
+.btn {
+    background-color: #1b839d;
+    color: #5500ff;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #155e71;
+}
