@@ -26,3 +26,16 @@ body{
 .btn:hover{
     background-color: #155e71;
 }
+
+
+#roll_button {
+    font-size: 2em;
+    background-color: #1b839d;
+    color: #ffffff;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+

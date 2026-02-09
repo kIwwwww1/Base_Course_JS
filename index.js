@@ -40,23 +40,46 @@
 
 // ===============================
 
-const minus = document.getElementById('minus')
-const plus = document.getElementById('plus')
-const reset = document.getElementById('reset')
-const result = document.getElementById('counter')
-let counter = 0
+// const minus = document.getElementById('minus')
+// const plus = document.getElementById('plus')
+// const reset = document.getElementById('reset')
+// const result = document.getElementById('counter')
+// let counter = 0
 
-minus.onclick = function() {
-    counter -= 1
-    result.textContent = counter
-}
+// minus.onclick = function() {
+//     counter -= 1
+//     result.textContent = counter
+// }
 
-plus.onclick = function() {
-    counter += 1
-    result.textContent = counter
-}
+// plus.onclick = function() {
+//     counter += 1
+//     result.textContent = counter
+// }
 
-reset.onclick = function() {
-    counter = 0
-    result.textContent = counter
+// reset.onclick = function() {
+//     counter = 0
+//     result.textContent = counter
+// }
+
+// ===============================
+
+// console.log(Math.PI)
+
+// ===============================
+
+const min = 50
+const max = 100
+
+let randomyNumber = Math.floor(Math.random() * (max - min + 1)) + min
+
+document.getElementById('roll_button').onclick = function() {
+    randomyNumber = Math.floor(Math.random() * (max - min + 1)) + min
+    if (randomyNumber < 50) {
+        document.getElementById('my_number').textContent = `Выпало меньше 50 | ${randomyNumber}`
+    } else if (randomyNumber > 50) {
+        document.getElementById('my_number').textContent = `Выпало больше 50 | ${randomyNumber}`
+    } else {
+        document.getElementById('my_number').textContent = `Выпало 50 | ${randomyNumber}`
+    }
+    // document.getElementById('my_number').textContent = randomyNumber
 }
