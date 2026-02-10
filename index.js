@@ -264,53 +264,59 @@
 
 // ===============================
 
-const display = document.getElementById('display')
-let timer = null
-let start_time = 0
-let elapsed_time = 0
-let is_running = false
+// const display = document.getElementById('display')
+// let timer = null
+// let start_time = 0
+// let elapsed_time = 0
+// let is_running = false
 
-function start() {
-    if (!is_running) {
-        start_time = Date.now() - elapsed_time
-        timer = setInterval(update, 10)
-        is_running = true
-    }
+// function start() {
+//     if (!is_running) {
+//         start_time = Date.now() - elapsed_time
+//         timer = setInterval(update, 10)
+//         is_running = true
+//     }
+// }
+
+// function stop() {
+//     if (is_running) {
+//         clearInterval(timer)
+//         elapsed_time = Date.now() - start_time
+//         is_running = false
+//     }
+
+// }
+
+// function reset() {
+//     clearInterval(timer)
+//     let start_time = 0
+//     let elapsed_time = 0
+//     let is_running = false
+//     display.textContent = '00:00:00:00'
+// }
+
+// function update() {
+//     const current_time = Date.now()
+//     elapsed_time = current_time - start_time
+//     let hours = Math.floor(elapsed_time / (1000 * 60 * 60))
+//     let minutes = Math.floor(elapsed_time / (1000 * 60)% 60)
+//     let seconds = Math.floor(elapsed_time / 1000 % 60)
+//     let milliseconds = Math.floor(elapsed_time % 1000 / 10)
+
+//     hours = hours.toString().padStart(2, '0')
+//     minutes = minutes.toString().padStart(2, '0')
+//     seconds = seconds.toString().padStart(2, '0')
+//     milliseconds = milliseconds.toString().padStart(2, '0')
+
+//     display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`
+// }
+
+// ===============================
+
+const verefi = document.getElementById('verefi')
+
+function verefi_click() {
+    username = window.prompt('Введите имя')
+    verefi.textContent = username
 }
-
-function stop() {
-    if (is_running) {
-        clearInterval(timer)
-        elapsed_time = Date.now() - start_time
-        is_running = false
-    }
-
-}
-
-function reset() {
-    clearInterval(timer)
-    let start_time = 0
-    let elapsed_time = 0
-    let is_running = false
-    display.textContent = '00:00:00:00'
-}
-
-function update() {
-    const current_time = Date.now()
-    elapsed_time = current_time - start_time
-    let hours = Math.floor(elapsed_time / (1000 * 60 * 60))
-    let minutes = Math.floor(elapsed_time / (1000 * 60)% 60)
-    let seconds = Math.floor(elapsed_time / 1000 % 60)
-    let milliseconds = Math.floor(elapsed_time % 1000 / 10)
-
-    hours = hours.toString().padStart(2, '0')
-    minutes = minutes.toString().padStart(2, '0')
-    seconds = seconds.toString().padStart(2, '0')
-    milliseconds = milliseconds.toString().padStart(2, '0')
-
-    display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`
-}
-
-
-
 
