@@ -187,3 +187,54 @@
 // }
 
 // ===============================
+
+// function add(x , y) {
+//     let sum = x + y
+//     return sum
+// }
+
+// let answer = add(x=10, y=20)
+// console.log(answer)
+
+// function is_even(number) {
+//     if (number % 2 == 0) {
+//         return true
+//     }
+//     else {
+//         return false
+//     }
+// }
+
+// console.log(is_even(12))
+// console.log(is_even(11))
+
+// function is_even_2(number) {
+//     return number % 2 == 0 ? true : false
+// }
+
+// console.log(is_even_2(12))
+// console.log(is_even_2(11))
+
+// ===============================
+
+const textBox = document.getElementById('temp')
+const toFahrenheit = document.getElementById('toFahrenheit')
+const toCelsius = document.getElementById('toCelsius')
+const result = document.getElementById('result')
+let temp
+
+function convert() {
+    if(toFahrenheit.checked){
+        temp = Number(textBox.value)
+        temp = temp * 9 / 5 + 32
+        result.textContent = `${temp.toFixed(1)}°F`
+    }
+    else if (toCelsius.checked){
+        temp = Number(textBox.value)
+        temp = (temp - 32) * (5 / 9)
+        result.textContent = `${temp.toFixed(1)}°C`
+    }
+    else{
+        result.textContent = `Вы не выбрали ни одной из кнопок`
+    }
+}
