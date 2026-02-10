@@ -151,5 +151,39 @@
 
 // ===============================
 
+// const min = 1
+// const max = 100
+// const answer = Math.floor(Math.random() * (max - min + 1)) + min
 
+// let attempts = 0
+// let guess
+// let running = true
 
+// while (running) {
+
+//     guess = window.prompt(`Угадай число от ${min} до ${max}`)
+//     guess = Number(guess)
+
+//     if(isNaN(guess)) {
+//         window.alert('Укажите валидное число!')
+//     }
+//     else if (guess < min | guess > max) [
+//         window.alert('Укажите валидное число!')
+//     ]
+//     else {
+//         attempts += 1
+//         if (guess > answer){
+//             window.alert('Загаданное число меньше')
+//         }
+//         else if (guess < answer){
+//             window.alert('Загаданное число больше')
+//         }
+//         else {
+//             window.alert(`Вы угадали за ${attempts} попыток!`)
+//             running = false
+//         }
+        
+//     }
+// }
+
+// ===============================
