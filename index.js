@@ -217,24 +217,100 @@
 
 // ===============================
 
-const textBox = document.getElementById('temp')
-const toFahrenheit = document.getElementById('toFahrenheit')
-const toCelsius = document.getElementById('toCelsius')
-const result = document.getElementById('result')
-let temp
+// const textBox = document.getElementById('temp')
+// const toFahrenheit = document.getElementById('toFahrenheit')
+// const toCelsius = document.getElementById('toCelsius')
+// const result = document.getElementById('result')
+// let temp
 
-function convert() {
-    if(toFahrenheit.checked){
-        temp = Number(textBox.value)
-        temp = temp * 9 / 5 + 32
-        result.textContent = `${temp.toFixed(1)}°F`
-    }
-    else if (toCelsius.checked){
-        temp = Number(textBox.value)
-        temp = (temp - 32) * (5 / 9)
-        result.textContent = `${temp.toFixed(1)}°C`
-    }
-    else{
-        result.textContent = `Вы не выбрали ни одной из кнопок`
+// function convert() {
+//     if(toFahrenheit.checked){
+//         temp = Number(textBox.value)
+//         temp = temp * 9 / 5 + 32
+//         result.textContent = `${temp.toFixed(1)}°F`
+//     }
+//     else if (toCelsius.checked){
+//         temp = Number(textBox.value)
+//         temp = (temp - 32) * (5 / 9)
+//         result.textContent = `${temp.toFixed(1)}°C`
+//     }
+//     else{
+//         result.textContent = `Вы не выбрали ни одной из кнопок`
+//     }
+// }
+
+// ===============================
+
+// const person = {
+//     name: 'John',
+//     age: 30,
+//     isMarried: false
+// }
+
+// console.log(person.name)
+
+// ===============================
+
+// function Car(model, speed) {
+//     this.model = model
+//     this.speed = speed
+// }
+
+// const car1 = new Car('BMW', 120)
+// const car2 = new Car('Audi', 200)
+
+// console.log(car1)
+// console.log(car2)
+
+// ===============================
+
+const display = document.getElementById('display')
+let timer = null
+let start_time = 0
+let elapsed_time = 0
+let is_running = false
+
+function start() {
+    if (!is_running) {
+        start_time = Date.now() - elapsed_time
+        timer = setInterval(update, 10)
+        is_running = true
     }
 }
+
+function stop() {
+    if (is_running) {
+        clearInterval(timer)
+        elapsed_time = Date.now() - start_time
+        is_running = false
+    }
+
+}
+
+function reset() {
+    clearInterval(timer)
+    let start_time = 0
+    let elapsed_time = 0
+    let is_running = false
+    display.textContent = '00:00:00:00'
+}
+
+function update() {
+    const current_time = Date.now()
+    elapsed_time = current_time - start_time
+    let hours = Math.floor(elapsed_time / (1000 * 60 * 60))
+    let minutes = Math.floor(elapsed_time / (1000 * 60)% 60)
+    let seconds = Math.floor(elapsed_time / 1000 % 60)
+    let milliseconds = Math.floor(elapsed_time % 1000 / 10)
+
+    hours = hours.toString().padStart(2, '0')
+    minutes = minutes.toString().padStart(2, '0')
+    seconds = seconds.toString().padStart(2, '0')
+    milliseconds = milliseconds.toString().padStart(2, '0')
+
+    display.textContent = `${hours}:${minutes}:${seconds}:${milliseconds}`
+}
+
+
+
+
