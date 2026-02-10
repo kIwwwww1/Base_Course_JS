@@ -162,5 +162,9 @@ a {
 .Navigator li a:hover{
     color: rgb(70, 70, 70);
     text-decoration: underline;
+    border-radius: 15px;
+    background-color: beige;
+    padding: 10px;
+    font-size: 1.1em;
 }
 
